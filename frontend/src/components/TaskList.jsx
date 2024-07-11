@@ -18,11 +18,11 @@ const TaskList = ({ tasks, onEdit, onDelete }) => (
           <td>{task.dateDue}</td>
           <td>{task.status}</td>
           <td>
-            <button className="edit-button" onClick={() => onEdit(task)}>
-              Edit
+            <button className="button" onClick={() => onEdit(task)}>
+              Edit 📝
             </button>
-            <button className="delete-button" onClick={() => onDelete(task.id)}>
-              Delete
+            <button  className="button" onClick={() => onDelete(task.id)}>
+              Delete ❌
             </button>
           </td>
         </tr>

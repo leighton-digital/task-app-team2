@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const statusOptions = ["to do", "complete"];
+const statusOptions = ["done","in progress", "not complete"];
 export const TaskForm = ({
   onSubmit,
   initialFormData,
@@ -25,7 +25,7 @@ export const TaskForm = ({
       taskTitle: "",
       description: "",
       dateDue: "",
-      status: "to do", // Default value for new tasks
+      status: "not complete", // Default value for new tasks
     });
   };
   useEffect(() => {

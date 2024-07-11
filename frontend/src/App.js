@@ -5,6 +5,7 @@ import axios from "axios";
 import "./App.css";
 const App = () => {
   const [editingTask, setEditingTask] = useState(null);
+  const [showForm, setShowForm] = useState(false);
   const taskListRef = useRef(null);
   const handleEdit = (task) => {
     setEditingTask(task);
@@ -40,7 +41,14 @@ const App = () => {
   return (
     <div className="container">
       <h1>Task Management</h1>
-      <div className="add-form">
+      
+      <TaskListContainer
+        ref={taskListRef}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
+      <button className="edit-button" onClick={()=>setShowForm(!showForm)}>Add Task ✅</button>
+      {showForm && <div className="add-form">
         <h2>{editingTask ? "Edit Task" : "Add New Task"}</h2>
         <TaskForm
           onSubmit={editingTask ? handleUpdate : handleAddTask}
@@ -55,12 +63,7 @@ const App = () => {
           isEditing={!!editingTask}
           setEditingTask={setEditingTask}
         />
-      </div>
-      <TaskListContainer
-        ref={taskListRef}
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
+      </div>}
     </div>
   );
 };
