@@ -84,7 +84,7 @@ h1 {
 }
 
 .tasks-table tr:nth-child(even) {
-  background-color: #7b7c7b;
+  background-color: #9da09d;
 }
 
 
@@ -98,18 +98,19 @@ h1 {
 
 .button {
   padding: 6px 12px;
-  margin: 0 5px;
+  margin: 0 5px 5px;
   border: none;
   cursor: pointer;
-  border: 1px solid black
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
-.edit-button {
+.edit-button {border-radius: 3px;
   background-color: #4caf50;
   color: white;
-}
+}button:hover{border-width: 4px;}
 
 .delete-button {
   background-color: #f44336;
   color: white;
-}
+} .button:hover{border-width: 2px;}
