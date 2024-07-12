@@ -4,6 +4,10 @@ the backend server starts database services so we can save our tasks and edit th
 
 ## starting the backend server 
 
+Install the required packages
+
+### `npm i`
+
 to start the backend server enter the following command 
 
 ### `npm start`
