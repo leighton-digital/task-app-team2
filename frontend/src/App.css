@@ -114,3 +114,6 @@ h1 {
   background-color: #f44336;
   color: white;
 } .button:hover{border-width: 2px;}
+.status{height: 8px;width: 8px;border-radius: 8px;background-color: #4caf50;display: inline-block ;margin-right: 5px;}
+.status.in-progress {background-color: darkorange;}
+.status.not-complete {background-color: #f44336;}

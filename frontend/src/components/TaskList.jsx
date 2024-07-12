@@ -12,11 +12,13 @@ const TaskList = ({ tasks, onEdit, onDelete }) => (
     </thead>
     <tbody>
       {tasks.map((task) => (
+        
+
         <tr key={task.id}>
           <td>{task.taskTitle}</td>
           <td>{task.description}</td>
           <td>{task.dateDue}</td>
-          <td>{task.status}</td>
+          <td><span className={'status ' + (task.status === 'in progress' ? 'in-progress': task.status === 'in-progress' ? 'in-progress':  task.status === 'not complete' ? 'not-complete':'')}></span>{task.status}</td>
           <td>
             <button className="button" onClick={() => onEdit(task)}>
               Edit 📝
