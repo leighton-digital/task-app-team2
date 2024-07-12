@@ -67,7 +67,7 @@ h1 {
 }
 
 .tasks-table {
-  width: 100%;
+  width: 100%; 
   border-collapse: collapse;
   margin: 20px 0;
 }
@@ -84,7 +84,12 @@ h1 {
 }
 
 .tasks-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #7b7c7b;
+}
+
+
+.tasks-table tr:nth-child(odd) {
+  background-color: #faf4f4;
 }
 
 .tasks-table tr:hover {
